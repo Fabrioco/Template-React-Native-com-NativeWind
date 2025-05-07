@@ -7,14 +7,14 @@ Este repositório é um **template inicial para projetos React Native** utilizan
 - [React Native](https://reactnative.dev/)
 - [NativeWind](https://www.nativewind.dev/)
 - [Tailwind CSS (estilo via classes utilitárias)](https://tailwindcss.com/)
-- [Expo (opcional)](https://expo.dev/) - se estiver usando com Expo
+- [Expo](https://expo.dev/)
 
 ## 📦 Como Usar
 
 ### 1. Clone o repositório
 
 ```bash
-git clone https://github.com/seu-usuario/nome-do-repositorio.git
+git clone https://github.com/Fabrioco/Template-React-Native-com-NativeWind.git
 cd nome-do-repositorio
 ```
 
