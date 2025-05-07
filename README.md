@@ -1,50 +1,95 @@
-# Welcome to your Expo app 👋
+# 📱 React Native Template com NativeWind
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Este repositório é um **template inicial para projetos React Native** utilizando o [NativeWind](https://www.nativewind.dev/) — uma biblioteca que traz o poder do Tailwind CSS para o React Native.
 
-## Get started
+## 🚀 Tecnologias Utilizadas
 
-1. Install dependencies
+- [React Native](https://reactnative.dev/)
+- [NativeWind](https://www.nativewind.dev/)
+- [Tailwind CSS (estilo via classes utilitárias)](https://tailwindcss.com/)
+- [Expo (opcional)](https://expo.dev/) - se estiver usando com Expo
 
-   ```bash
-   npm install
-   ```
+## 📦 Como Usar
 
-2. Start the app
-
-   ```bash
-   npx expo start
-   ```
-
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
+### 1. Clone o repositório
 
 ```bash
-npm run reset-project
+git clone https://github.com/seu-usuario/nome-do-repositorio.git
+cd nome-do-repositorio
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+### 2. Instale as dependências
 
-## Learn more
+```bash
+npm install
+# ou
+yarn
+```
 
-To learn more about developing your project with Expo, look at the following resources:
+### 3. Inicie o projeto
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+```bash
+npx react-native run-android
+# ou
+npx react-native run-ios
+# ou, se estiver usando Expo:
+npx expo start
+```
 
-## Join the community
+# 🎨 Exemplo de Uso do NativeWind
 
-Join our community of developers creating universal apps.
+```bash
+import { View, Text } from 'react-native';
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+export default function App() {
+  return (
+    <View className="flex-1 items-center justify-center bg-white">
+      <Text className="text-2xl font-bold text-blue-600">Hello NativeWind!</Text>
+    </View>
+  );
+}
+```
+
+# 📁 Estrutura do Projeto
+
+```bash
+📦 nome-do-projeto
+├── App.tsx
+├── tailwind.config.js
+├── babel.config.js
+├── package.json
+└── ...
+```
+
+# 🛠 Configuração do NativeWind
+
+Certifique-se de que o arquivo **tailwind.config.js** está corretamente configurado:
+
+```bash
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: ["./App.{js,jsx,ts,tsx}", "./src/**/*.{js,jsx,ts,tsx}"],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+```
+
+E o **babel.config.js** também deve conter:
+
+```bash
+module.exports = function(api) {
+  api.cache(true);
+  return {
+    presets: ['babel-preset-expo'],
+    plugins: ['nativewind/babel'],
+  };
+};
+```
+
+## 🤝 Contribuição
+Sinta-se à vontade para abrir issues ou pull requests para melhorias ou sugestões
+
+
+Desenvolvido por [Fabrício Oliveira Lopes](github.com/Fabrioco)
